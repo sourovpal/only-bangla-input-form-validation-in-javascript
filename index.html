@@ -1,0 +1,14 @@
+<form action="">
+    <input type="text">
+</form>
+<script language="JavaScript" type="text/javascript">
+    document.forms[0].addEventListener("input", function (e) {
+      var input = this.children[0];
+      var not = input.value.match(/[a-zA-Z0-9]+/g);
+      if (not) {
+          not.forEach(function (text) {
+              input.value = input.value.replace(text, "")
+          })
+      }
+  })
+</script> 
